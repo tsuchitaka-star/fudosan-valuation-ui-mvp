@@ -1423,3 +1423,52 @@ h3,
   border-color: #ffffff !important;
   color: #ffffff !important;
 }
+
+/* Headline only: black text + white edge. Body/labels stay white + black edge. */
+.corp-hero h1 {
+  color: #0b0d0f !important;
+  text-shadow:
+    -1px -1px 0 #ffffff,
+     0px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  0px 0 #ffffff,
+     1px  0px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     0px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     0 2px 10px rgba(255,255,255,.35) !important;
+}
+.corp-hero .kicker,
+.corp-hero .lede,
+.corp-hero .hero-trust strong,
+.corp-hero .hero-trust span {
+  color: #ffffff !important;
+  text-shadow:
+    -1px -1px 0 #111111,
+     0px -1px 0 #111111,
+     1px -1px 0 #111111,
+    -1px  0px 0 #111111,
+     1px  0px 0 #111111,
+    -1px  1px 0 #111111,
+     0px  1px 0 #111111,
+     1px  1px 0 #111111,
+     0 2px 10px rgba(0,0,0,.28) !important;
+}
+.corp-hero .kicker {
+  color: #ffd7a8 !important;
+  text-shadow:
+    -1px -1px 0 #1a1208,
+     0px -1px 0 #1a1208,
+     1px -1px 0 #1a1208,
+    -1px  0px 0 #1a1208,
+     1px  0px 0 #1a1208,
+    -1px  1px 0 #1a1208,
+     0px  1px 0 #1a1208,
+     1px  1px 0 #1a1208 !important;
+}
+.corp-hero .lede {
+  color: rgba(255,255,255,.96) !important;
+}
+.corp-hero .hero-trust span {
+  color: rgba(255,255,255,.9) !important;
+}
