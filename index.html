@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>不動産価値診断 | 土地と建物の価値を、いま確認する</title>
+  <meta name="description" content="建設・不動産の現場視点で、住所と条件からいまの価格感を確認する価値診断サービス。">
+  <meta property="og:title" content="不動産価値診断">
+  <meta property="og:description" content="土地と建物の価値を、いま確認する。">
+  <meta property="og:image" content="./assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="./assets/og-image.png">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#" data-go="entry" aria-label="不動産価値診断 トップへ">
+          <span class="brand-symbol" aria-hidden="true">V</span>
+          <span class="brand-copy">
+            <strong>不動産価値診断</strong>
+            <small>REAL ESTATE VALUE CHECK</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="主要ナビ">
+          <a href="#mission">価値診断について</a>
+          <a href="#services">対象物件</a>
+          <a href="#flow">診断の流れ</a>
+          <button class="nav-cta" data-go="type">無料で診断する</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ENTRY / CORPORATE LANDING -->
+      <section id="step-entry" class="screen is-active" data-step="entry">
+        <section class="corp-hero">
+          <div class="corp-hero-media">
+            <img src="./assets/type-mansion.png" alt="">
+            <div class="corp-hero-scrim"></div>
+          </div>
+          <div class="corp-hero-content">
+            <p class="kicker">PROPERTY VALUE / ONLINE CHECK</p>
+            <h1>土地と建物の価値を、<br>いま確認する。</h1>
+            <p class="lede">売却・建替え・相続を考える前に。住所と物件条件から、現在の参考価格と価格を左右する要因を整理します。</p>
+            <div class="hero-actions">
+              <button class="btn primary" data-go="type" id="start">無料で診断を始める</button>
+              <a class="btn ghost light" href="#flow">診断の流れを見る</a>
+            </div>
+            <div class="hero-trust">
+              <div><strong>登録不要</strong><span>個人情報の入力なし</span></div>
+              <div><strong>約3分</strong><span>分かる項目だけで診断</span></div>
+              <div><strong>結果を比較</strong><span>価格帯と根拠を表示</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="usecase-band" aria-label="利用シーン">
+          <p>こんな時に</p>
+          <div><span>01</span><strong>売却前の相場確認</strong></div>
+          <div><span>02</span><strong>建替え計画の整理</strong></div>
+          <div><span>03</span><strong>相続資産の把握</strong></div>
+        </section>
+
+        <section id="mission" class="band mission-band">
+          <div class="mission-media">
+            <img src="./assets/side-quiet-check.png" alt="建物と周辺環境を確認するイメージ">
+          </div>
+          <div class="band-copy">
+            <p class="kicker dark">OUR VIEW</p>
+            <h2>価格だけでなく、<br>土地と建物の条件を見る。</h2>
+            <p>不動産の価値は、立地や取引相場だけでは決まりません。接道、土地形状、建物の状態、管理状況など、将来の使い方に関わる条件も価格に影響します。</p>
+            <p>不動産価値診断は、建設・不動産の実務で確認する項目を順番に整理し、参考価格とその根拠を分かりやすく表示します。</p>
+            <div class="mission-rule">
+              <strong>価格帯</strong><span>早期売却 / 想定 / チャレンジ</span>
+              <strong>判断材料</strong><span>近隣事例 / 条件補正 / 市場傾向</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="band">
+          <div class="section-head center">
+            <p class="kicker dark">TARGET PROPERTY</p>
+            <h2>診断する物件を選ぶ</h2>
+            <p>物件種別ごとに、価値を左右する条件を切り替えて診断します。</p>
+          </div>
+          <div class="service-grid">
+            <button class="service-card" data-type="mansion" data-go="location">
+              <img src="./assets/type-mansion.png" alt="">
+              <div>
+                <span>TYPE 01</span>
+                <strong>中古マンション</strong>
+                <p>階数、管理、駅距離など、住戸条件を中心に診断します。</p>
+                <em>診断する <b aria-hidden="true">&#8599;</b></em>
+              </div>
+            </button>
+            <button class="service-card" data-type="land" data-go="location">
+              <img src="./assets/type-land.png" alt="">
+              <div>
+                <span>TYPE 02</span>
+                <strong>土地</strong>
+                <p>接道、形状、権利、再建築性など、土地条件で見ます。</p>
+                <em>診断する <b aria-hidden="true">&#8599;</b></em>
+              </div>
+            </button>
+            <button class="service-card" data-type="landBuilding" data-go="location">
+              <img src="./assets/type-landbuilding.png" alt="">
+              <div>
+                <span>TYPE 03</span>
+                <strong>土地＋建物</strong>
+                <p>土地は比較、建物は原価の考え方で分けて整理します。</p>
+                <em>診断する <b aria-hidden="true">&#8599;</b></em>
+              </div>
+            </button>
+          </div>
+        </section>
+
+        <section id="flow" class="band flow-band">
+          <div class="section-head center">
+            <p class="kicker dark">PROCESS</p>
+            <h2>診断の流れ</h2>
+          </div>
+          <div class="flow-grid">
+            <article><span>01</span><strong>物件を選ぶ</strong><p>マンション / 土地 / 土地＋建物</p></article>
+            <article><span>02</span><strong>基本情報を入力</strong><p>住所・駅・面積などを入力</p></article>
+            <article><span>03</span><strong>条件を追加</strong><p>分かる範囲で精度を高める</p></article>
+            <article><span>04</span><strong>診断結果を確認</strong><p>参考価格・事例・補正を確認</p></article>
+          </div>
+          <div class="center-actions">
+            <button class="btn primary" data-go="type">無料診断を始める</button>
+          </div>
+        </section>
+      </section>
+
+      <!-- TYPE -->
+      <section id="step-type" class="screen tool-screen" data-step="type">
+        <div class="tool-shell">
+          <div class="step-rail" aria-label="進捗">
+            <div class="step is-current"><span>1</span>種別</div>
+            <div class="step"><span>2</span>場所</div>
+            <div class="step"><span>3</span>条件</div>
+            <div class="step"><span>4</span>結果</div>
+          </div>
+          <div class="section-head">
+            <p class="kicker dark">STEP 1</p>
+            <h2>まず、物件種別を選ぶ</h2>
+            <p>物件種別に合わせて、必要な入力項目を切り替えます。</p>
+          </div>
+          <div class="service-grid compact">
+            <button class="service-card" data-type="mansion" data-go="location">
+              <img src="./assets/type-mansion.png" alt="">
+              <div>
+                <span>TYPE 01</span>
+                <strong>中古マンション</strong>
+                <p>住戸条件を中心に診断</p>
+              </div>
+            </button>
+            <button class="service-card" data-type="land" data-go="location">
+              <img src="./assets/type-land.png" alt="">
+              <div>
+                <span>TYPE 02</span>
+                <strong>土地</strong>
+                <p>接道・権利・形状で診断</p>
+              </div>
+            </button>
+            <button class="service-card" data-type="landBuilding" data-go="location">
+              <img src="./assets/type-landbuilding.png" alt="">
+              <div>
+                <span>TYPE 03</span>
+                <strong>土地＋建物</strong>
+                <p>土地比較 + 建物原価</p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section id="step-location" class="screen tool-screen" data-step="location">
+        <div class="tool-shell">
+          <div class="step-rail" aria-label="進捗">
+            <div class="step is-done"><span>✓</span>種別</div>
+            <div class="step is-current"><span>2</span>場所</div>
+            <div class="step"><span>3</span>条件</div>
+            <div class="step"><span>4</span>結果</div>
+          </div>
+          <div class="section-head with-action">
+            <div>
+              <p class="kicker dark">STEP 2 · <span id="typeLabel">中古マンション</span></p>
+              <h2>場所と基本条件</h2>
+              <p>現場調査でも最初に確認する項目です。ここまでで一次診断できます。</p>
+            </div>
+            <button class="btn ghost small" data-go="type">種別を変更</button>
+          </div>
+
+          <div class="form-layout">
+            <div class="form-stack">
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-label">SITE</p>
+                    <h3>住所</h3>
+                  </div>
+                  <span class="badge required">必須</span>
+                </div>
+                <div class="field-row">
+                  <label>
+                    郵便番号
+                    <input id="zipcode" inputmode="numeric" placeholder="1000014">
+                  </label>
+                  <button class="btn secondary" type="button" id="lookupBtn">住所を自動入力</button>
+                </div>
+                <label>
+                  住所
+                  <input id="addressBase" placeholder="東京都千代田区永田町">
+                </label>
+                <label>
+                  番地・建物名 <span class="optional">任意</span>
+                  <input id="addressDetail" placeholder="1-7-1 東京マンション">
+                </label>
+                <button class="btn secondary full" type="button" id="detectBtn">最寄駅を自動検知</button>
+                <p class="helper" id="areaNote">対象エリア：未検知</p>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-label">BASE CONDITIONS</p>
+                    <h3>必須の基本条件</h3>
+                  </div>
+                  <span class="badge required">必須</span>
+                </div>
+                <div class="field-grid">
+                  <label>
+                    最寄駅
+                    <input id="stationName" placeholder="国会議事堂前">
+                  </label>
+                  <label>
+                    徒歩分数
+                    <input id="walkMinutes" type="number" min="1" placeholder="8">
+                  </label>
+                  <label id="targetAreaWrap">
+                    面積（㎡）
+                    <input id="targetArea" type="number" min="1" placeholder="65">
+                  </label>
+                  <label class="land-building-only hidden">
+                    土地面積（㎡）
+                    <input id="landArea" type="number" min="1" placeholder="100">
+                  </label>
+                  <label class="land-building-only hidden">
+                    建物延床面積（㎡）
+                    <input id="buildingTotalArea" type="number" min="1" placeholder="90">
+                  </label>
+                  <label class="mansion-only">
+                    間取り
+                    <select id="floorPlan">
+                      <option value="unknown">未選択</option>
+                      <option value="1K">1K / 1DK</option>
+                      <option value="1LDK">1LDK</option>
+                      <option value="2LDK">2LDK</option>
+                      <option value="3LDK">3LDK</option>
+                      <option value="4LDK">4LDK以上</option>
+                    </select>
+                  </label>
+                  <label class="not-land-only">
+                    築年数
+                    <input id="buildingAge" type="number" min="0" placeholder="15">
+                  </label>
+                </div>
+              </section>
+
+              <div class="cta-bar">
+                <div>
+                  <strong>一次診断へ進めます</strong>
+                  <p>詳細条件は、精度を上げたいときだけ追加してください。</p>
+                </div>
+                <div class="cta-actions">
+                  <button class="btn ghost" data-go="details">詳細条件を追加</button>
+                  <button class="btn primary" id="runQuick">この条件で診断する</button>
+                </div>
+              </div>
+              <p class="message" id="message"></p>
+            </div>
+
+            <aside class="side-card">
+              <img src="./assets/side-quiet-check.png" alt="">
+              <p class="panel-label">FIELD NOTE</p>
+              <h3>現場でも最初に見る項目</h3>
+              <ul>
+                <li>住所と接道・駅距離</li>
+                <li>面積と建物のボリューム</li>
+                <li>種別ごとの基本条件</li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILS -->
+      <section id="step-details" class="screen tool-screen" data-step="details">
+        <div class="tool-shell">
+          <div class="step-rail" aria-label="進捗">
+            <div class="step is-done"><span>✓</span>種別</div>
+            <div class="step is-done"><span>✓</span>場所</div>
+            <div class="step is-current"><span>3</span>条件</div>
+            <div class="step"><span>4</span>結果</div>
+          </div>
+          <div class="section-head with-action">
+            <div>
+              <p class="kicker dark">STEP 3 · 任意</p>
+              <h2>精度を上げる詳細条件</h2>
+              <p>分からない項目はそのままで構いません。入力した分だけ補正に使います。</p>
+            </div>
+            <button class="btn ghost small" data-go="location">戻る</button>
+          </div>
+
+          <div class="details-grid">
+            <section class="panel mansion-only">
+              <p class="panel-label">MANSION</p>
+              <h3>マンション条件</h3>
+              <div class="field-grid">
+                <label>所在階<input id="floor" type="number" placeholder="5"></label>
+                <label>総階数<input id="totalFloors" type="number" placeholder="10"></label>
+                <label>方角
+                  <select id="direction">
+                    <option value="unknown">分からない</option>
+                    <option value="south">南</option>
+                    <option value="eastwest">東・西</option>
+                    <option value="north">北</option>
+                  </select>
+                </label>
+                <label>管理状態
+                  <select id="management">
+                    <option value="unknown">分からない</option>
+                    <option value="good">良い</option>
+                    <option value="poor">弱い</option>
+                  </select>
+                </label>
+                <label>リフォーム
+                  <select id="renovation">
+                    <option value="unknown">分からない</option>
+                    <option value="renovated">済み</option>
+                    <option value="needed">必要</option>
+                  </select>
+                </label>
+                <label>角部屋
+                  <select id="cornerRoom">
+                    <option value="unknown">分からない</option>
+                    <option value="yes">角部屋</option>
+                    <option value="no">それ以外</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+
+            <section class="panel land-only land-building-only hidden">
+              <p class="panel-label">LAND</p>
+              <h3>土地条件</h3>
+              <div class="field-grid">
+                <label>接道方位
+                  <select id="roadDirection">
+                    <option value="unknown">分からない</option>
+                    <option value="south">南道路</option>
+                    <option value="eastwest">東・西道路</option>
+                    <option value="north">北道路</option>
+                  </select>
+                </label>
+                <label>土地形状
+                  <select id="landShape">
+                    <option value="unknown">分からない</option>
+                    <option value="regular">整形地</option>
+                    <option value="slightly">やや不整形</option>
+                    <option value="irregular">不整形</option>
+                  </select>
+                </label>
+                <label>再建築
+                  <select id="rebuildable">
+                    <option value="unknown">分からない</option>
+                    <option value="yes">できる</option>
+                    <option value="limited">条件付き</option>
+                    <option value="no">不可</option>
+                  </select>
+                </label>
+                <label>土地権利
+                  <select id="landRight">
+                    <option value="unknown">分からない</option>
+                    <option value="ownership">所有権</option>
+                    <option value="leasehold">借地権</option>
+                    <option value="fixedLeasehold">定期借地権</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+
+            <section class="panel">
+              <p class="panel-label">COMMON</p>
+              <h3>共通の見栄え条件</h3>
+              <div class="field-grid">
+                <label>日当たり
+                  <select id="sunlight">
+                    <option value="unknown">分からない</option>
+                    <option value="good">良い</option>
+                    <option value="normal">普通</option>
+                    <option value="poor">弱い</option>
+                  </select>
+                </label>
+                <label>眺望
+                  <select id="viewQuality">
+                    <option value="unknown">分からない</option>
+                    <option value="good">良い</option>
+                    <option value="normal">普通</option>
+                    <option value="poor">弱い</option>
+                  </select>
+                </label>
+              </div>
+            </section>
+          </div>
+
+          <div class="cta-bar sticky-cta">
+            <div>
+              <strong>詳細を反映して診断</strong>
+              <p>空欄の項目は補正なしで計算します。</p>
+            </div>
+            <button class="btn primary" id="runFull">診断する</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULT -->
+      <section id="step-result" class="screen tool-screen" data-step="result">
+        <div class="tool-shell">
+          <div class="step-rail" aria-label="進捗">
+            <div class="step is-done"><span>✓</span>種別</div>
+            <div class="step is-done"><span>✓</span>場所</div>
+            <div class="step is-done"><span>✓</span>条件</div>
+            <div class="step is-current"><span>4</span>結果</div>
+          </div>
+
+          <div class="result-layout">
+            <div class="result-main">
+              <section class="price-hero">
+                <div class="price-hero-copy">
+                  <p class="kicker">VALUE REPORT</p>
+                  <p class="price-label">売却想定価格</p>
+                  <h2 id="recommendedPrice">4,280万円</h2>
+                  <p class="lede" id="resultSummary">成約事例ベースの参考価格です。実際の売却価格を保証するものではありません。</p>
+                  <div class="price-range">
+                    <div>
+                      <span>早期売却</span>
+                      <strong id="quickPrice">4,023万円</strong>
+                    </div>
+                    <div class="range-mid">
+                      <span>想定</span>
+                      <strong id="midPrice">4,280万円</strong>
+                    </div>
+                    <div>
+                      <span>チャレンジ</span>
+                      <strong id="challengePrice">4,408万円</strong>
+                    </div>
+                  </div>
+                </div>
+                <img class="result-visual" src="./assets/result-price-band.png" alt="">
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-label">READING</p>
+                    <h3>価格の読み方</h3>
+                  </div>
+                </div>
+                <div class="insight-grid">
+                  <article>
+                    <span>01</span>
+                    <strong>相場の位置</strong>
+                    <p id="marketTrendLabel">このエリアは横ばい寄りです。</p>
+                  </article>
+                  <article>
+                    <span>02</span>
+                    <strong>売りやすさ</strong>
+                    <p id="liquidityLabel">流通性は標準です。</p>
+                  </article>
+                  <article>
+                    <span>03</span>
+                    <strong>今回の見方</strong>
+                    <p id="methodLabel">取引比較 + 条件補正</p>
+                  </article>
+                </div>
+              </section>
+
+              <section class="panel">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-label">COMPARABLES</p>
+                    <h3>自動選定された取引事例</h3>
+                  </div>
+                  <span class="badge soft">近い5件</span>
+                </div>
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>地区</th>
+                        <th>面積</th>
+                        <th>価格</th>
+                        <th>㎡単価</th>
+                        <th>時期</th>
+                      </tr>
+                    </thead>
+                    <tbody id="casesBody">
+                      <tr><td>永田町</td><td>62㎡</td><td>4,150万円</td><td>66.9万円/㎡</td><td>2024年</td></tr>
+                      <tr><td>平河町</td><td>68㎡</td><td>4,480万円</td><td>65.9万円/㎡</td><td>2023年</td></tr>
+                      <tr><td>麹町</td><td>58㎡</td><td>3,980万円</td><td>68.6万円/㎡</td><td>2024年</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+
+              <details class="panel breakdown">
+                <summary>内訳と補正を見る</summary>
+                <div class="breakdown-grid">
+                  <div><span>成約ベース</span><strong id="contractBasePrice">4,120万円</strong></div>
+                  <div><span>物件条件補正</span><strong id="conditionAdjustmentTotal">+2.5%</strong></div>
+                  <div><span>市場調整</span><strong id="marketAdjustmentFactor">1.02倍</strong></div>
+                  <div><span>悪条件補正</span><strong id="badConditionAdjustmentTotal">0%</strong></div>
+                  <div><span>回帰予測単価</span><strong id="unitPrice">65.8万円/㎡</strong></div>
+                  <div><span>分析件数</span><strong id="sampleCount">48件</strong></div>
+                </div>
+                <div id="adjustments" class="adjustments">
+                  <div class="adj"><span>駅徒歩</span><strong class="plus">+0.8%</strong></div>
+                  <div class="adj"><span>所在階</span><strong class="plus">+1.0%</strong></div>
+                  <div class="adj"><span>日当たり</span><strong class="plus">+0.7%</strong></div>
+                </div>
+              </details>
+            </div>
+
+            <aside class="result-side">
+              <section class="panel sticky-side">
+                <p class="panel-label">NEXT ACTION</p>
+                <h3>次にできること</h3>
+                <button class="btn primary full" data-go="location">条件を修正して再診断</button>
+                <button class="btn secondary full" data-go="type">別の物件種別で見る</button>
+                <button class="btn ghost full" data-go="entry">トップへ戻る</button>
+                <div class="disclaimer-mini">
+                  <p>参考価格です。不動産鑑定評価ではありません。実際の売却や建替え判断は個別事情で変動します。</p>
+                </div>
+                <img src="./assets/empty-quiet.png" alt="">
+              </section>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div>
+          <strong>不動産価値診断</strong>
+          <p>土地と建物の現在価値を、価格帯と根拠から確認するオンライン診断です。</p>
+        </div>
+        <div>
+          <p class="panel-label">MENU</p>
+          <a href="#mission">価値診断について</a>
+          <a href="#services">対象物件</a>
+          <a href="#flow">診断の流れ</a>
+        </div>
+        <div>
+          <p class="panel-label">NOTE</p>
+          <p>本MVPはUI確認用です。実査定API連携前でも画面遷移と情報設計を確認できます。</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
