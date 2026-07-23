@@ -1086,7 +1086,7 @@ h3,
   min-height: 0;
   height: 148vh;
   overflow: visible;
-  background: #ffffff;
+  background: #f7f7f6;
 }
 .corp-hero-media {
   position: sticky;
@@ -1095,25 +1095,19 @@ h3,
   overflow: hidden;
 }
 .corp-hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
   transform: translate3d(0, calc(var(--hero-progress) * -3vh), 0) scale(calc(1 + var(--hero-progress) * .075));
-  transform-origin: 65% 50%;
-  object-position: 68% center;
-  filter: brightness(1.02) saturate(0.95);
+  transform-origin: 70% 48%;
+  filter: brightness(1.03) contrast(1.04) saturate(.92);
   will-change: transform;
 }
+/* No full-screen scrim. Readability comes from type treatment only. */
 .corp-hero-scrim {
-  display: block;
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(90deg, 
-    #ffffff 0%, 
-    rgba(255, 255, 255, 0.97) 38%, 
-    rgba(255, 255, 255, 0.88) 54%, 
-    rgba(255, 255, 255, 0.45) 75%, 
-    rgba(255, 255, 255, 0) 96%
-  );
-  pointer-events: none;
+  display: none !important;
+  background: none !important;
 }
 .corp-hero-content {
   position: absolute;
@@ -1124,116 +1118,140 @@ h3,
   justify-content: center;
   height: 100vh;
   width: min(1240px, calc(100% - 64px));
-  max-width: 630px;
+  max-width: 640px;
   margin: 0;
-  padding: 100px 0 30px;
+  padding: 104px 0 36px;
   margin-left: max(32px, calc((100% - 1240px) / 2));
   opacity: calc(1 - var(--hero-progress) * 1.45);
   transform: translate3d(0, calc(var(--hero-progress) * -7vh), 0);
   pointer-events: auto;
   will-change: opacity, transform;
-  color: #0f172a;
-}
-.corp-hero h1,
-.corp-hero .lede,
-.corp-hero .kicker,
-.corp-hero .hero-trust {
-  text-shadow: none !important;
-  color: #0f172a;
+  color: #101214;
 }
 .corp-hero .kicker {
-  color: #c2410c;
+  color: #b45309;
   font-weight: 700;
-  letter-spacing: 0.16em;
-  font-size: 13px;
-  margin-bottom: 16px;
+  letter-spacing: 0.14em;
+  font-size: 12px;
+  margin: 0 0 16px;
+  /* tight edge only around glyphs */
+  text-shadow:
+    0 0 1px rgba(255,255,255,1),
+    0 1px 0 rgba(255,255,255,.95),
+    1px 0 0 rgba(255,255,255,.8),
+    -1px 0 0 rgba(255,255,255,.8),
+    0 -1px 0 rgba(255,255,255,.8);
 }
 .corp-hero h1 {
-  font-size: clamp(38px, 4.6vw, 58px);
+  font-size: clamp(40px, 4.8vw, 62px);
   font-weight: 700;
-  line-height: 1.22;
+  line-height: 1.18;
   letter-spacing: -0.02em;
-  color: #0f172a;
-  margin-bottom: 20px;
+  color: #0b0d0f;
+  margin: 0 0 18px;
+  max-width: 11ch;
+  text-shadow:
+    0 0 1px rgba(255,255,255,1),
+    0 1px 0 rgba(255,255,255,1),
+    1px 0 0 rgba(255,255,255,.95),
+    -1px 0 0 rgba(255,255,255,.95),
+    0 -1px 0 rgba(255,255,255,.95),
+    1px 1px 0 rgba(255,255,255,.9),
+    -1px 1px 0 rgba(255,255,255,.9),
+    0 2px 8px rgba(255,255,255,.55);
 }
 .corp-hero .lede {
-  color: #334155;
+  color: #1f2933;
   font-size: 16.5px;
   line-height: 1.85;
-  max-width: 540px;
-  font-weight: 400;
-  margin-bottom: 28px;
+  max-width: 34em;
+  font-weight: 500;
+  margin: 0 0 28px;
+  text-shadow:
+    0 0 1px rgba(255,255,255,1),
+    0 1px 0 rgba(255,255,255,.98),
+    1px 0 0 rgba(255,255,255,.85),
+    -1px 0 0 rgba(255,255,255,.85),
+    0 -1px 0 rgba(255,255,255,.85);
 }
 .corp-hero .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   flex-wrap: wrap;
   align-items: center;
 }
 .corp-hero .btn.primary {
   background: #c2410c;
-  color: #ffffff;
+  color: #fff;
   font-weight: 700;
   font-size: 15px;
-  padding: 0 28px;
+  padding: 0 26px;
   min-height: 52px;
   border-radius: 6px;
-  box-shadow: 0 4px 14px rgba(194, 65, 12, 0.28);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 22px rgba(194, 65, 12, 0.24);
 }
 .corp-hero .btn.primary:hover {
   background: #9a3412;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(194, 65, 12, 0.36);
 }
 .corp-hero .btn.ghost,
-.corp-hero .btn.light {
-  background: rgba(255, 255, 255, 0.94);
-  color: #0f172a;
-  border: 1.5px solid #cbd5e1;
+.corp-hero .btn.light,
+.corp-hero a.btn.ghost.light {
+  background: rgba(255,255,255,.72);
+  color: #111827;
+  border: 1px solid rgba(17,24,39,.22);
   font-weight: 700;
   font-size: 15px;
-  padding: 0 24px;
+  padding: 0 22px;
   min-height: 52px;
   border-radius: 6px;
-  backdrop-filter: blur(8px);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .corp-hero .btn.ghost:hover,
-.corp-hero .btn.light:hover {
-  background: #ffffff;
-  border-color: #94a3b8;
-  color: #0284c7;
+.corp-hero .btn.light:hover,
+.corp-hero a.btn.ghost.light:hover {
+  background: #fff;
+  border-color: rgba(17,24,39,.4);
 }
+/* Trust labels: no white cards, just type + hairline */
 .corp-hero .hero-trust {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
   margin-top: 40px;
-  max-width: 600px;
+  max-width: 620px;
 }
 .corp-hero .hero-trust div {
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 16px 18px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(17, 24, 39, 0.28);
+  border-radius: 0;
+  padding: 14px 0 0;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 .corp-hero .hero-trust strong {
   display: block;
-  color: #0f172a;
+  color: #0b0d0f;
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 4px;
+  text-shadow:
+    0 0 1px rgba(255,255,255,1),
+    0 1px 0 rgba(255,255,255,.95),
+    1px 0 0 rgba(255,255,255,.8),
+    -1px 0 0 rgba(255,255,255,.8);
 }
 .corp-hero .hero-trust span {
   display: block;
-  color: #64748b;
+  color: #334155;
   font-size: 13px;
   font-weight: 500;
   line-height: 1.5;
+  text-shadow:
+    0 0 1px rgba(255,255,255,1),
+    0 1px 0 rgba(255,255,255,.95);
 }
 .usecase-band {
   position: relative;
@@ -1252,31 +1270,26 @@ h3,
 .scroll-reveal.is-visible { opacity: 1; transform: translateY(0); }
 @media (max-width: 960px) {
   .corp-hero { height: 132vh; }
-  .corp-hero-scrim {
-    background: linear-gradient(180deg, 
-      #ffffff 0%, 
-      rgba(255, 255, 255, 0.95) 55%, 
-      rgba(255, 255, 255, 0.70) 80%, 
-      rgba(255, 255, 255, 0.2) 100%
-    );
-  }
+  .corp-hero-media img { object-position: 58% center; }
   .corp-hero-content {
     inset: 0;
     width: auto;
     height: 100vh;
     margin: 0 20px;
     padding: 96px 0 40px;
-    max-width: min(590px, calc(100% - 40px));
+    max-width: min(600px, calc(100% - 40px));
   }
-  .corp-hero-media img {
-    object-position: 50% center;
-    transform: translate3d(0, calc(var(--hero-progress) * -2vh), 0) scale(calc(1 + var(--hero-progress) * .045));
-  }
-  .corp-hero .hero-trust { grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .corp-hero h1 { max-width: 12ch; }
+  .corp-hero .hero-trust { grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
   .usecase-band { margin-top: -8vh; }
 }
 @media (max-width: 620px) {
-  .corp-hero .hero-trust { grid-template-columns: 1fr; }
+  .corp-hero-media img { object-position: 48% center; }
+  .corp-hero h1 { font-size: 36px; max-width: none; }
+  .corp-hero .lede { font-size: 15px; }
+  .corp-hero .hero-actions .btn { width: 100%; }
+  .corp-hero .hero-trust { grid-template-columns: 1fr; margin-top: 28px; }
+  .corp-hero .hero-trust div:nth-child(3) { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .corp-hero { height: 100vh; min-height: 720px; }
@@ -1286,6 +1299,7 @@ h3,
   .usecase-band { margin-top: 0; }
   .scroll-reveal { opacity: 1; transform: none; transition: none; }
 }
+/* Light header stays */
 .site-header {
   background: rgba(255, 255, 255, .96);
   border-bottom: 1px solid rgba(17, 20, 22, .1);
@@ -1295,3 +1309,25 @@ h3,
 .site-header button,
 .brand-copy strong,
 .brand-copy small { color: #17191b; }
+
+/* Final hero readability pass: no scrim plate, type-only contrast */
+.corp-hero-scrim,
+.corp-hero .corp-hero-scrim {
+  display: none !important;
+  opacity: 0 !important;
+  background: none !important;
+  pointer-events: none !important;
+}
+.corp-hero-content {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: 0 !important;
+}
+.corp-hero h1,
+.corp-hero .lede,
+.corp-hero .kicker,
+.corp-hero .hero-trust strong,
+.corp-hero .hero-trust span {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
+}
