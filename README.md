@@ -89,3 +89,13 @@ npx serve .
 
 個人間のUIレビュー用に共有しています。  
 再公開や商用利用する場合は事前に相談してください。
+
+## 公開URL（HTMLのみ）
+
+スマホでもそのまま開けます。
+
+`	ext
+https://tsuchitaka-star.github.io/fudosan-valuation-ui-mvp/
+`
+
+静的HTMLのみです。バックエンドは不要です。
